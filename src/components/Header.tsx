@@ -12,34 +12,49 @@ export function Header() {
 
   return (
     <header className="flex flex-col items-center text-center">
-      <div className="h-24 w-24 overflow-hidden rounded-full border border-brand-border bg-brand-surface shadow-[0_0_40px_-12px_rgba(255,106,26,0.45)] sm:h-28 sm:w-28">
-        {showImage ? (
-          <img
-            src={resolveAssetPath(siteConfig.logo)}
-            alt={`${siteConfig.name} Logo`}
-            className="h-full w-full object-cover"
-            onError={() => setLogoFailed(true)}
-          />
-        ) : (
-          <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-brand-orange/30 via-brand-surface to-brand-blue/20 text-3xl font-bold text-brand-text">
-            {initial}
+      <div className="animate-fade-in-up relative">
+        <div className="absolute inset-0 -z-10 scale-110 rounded-[32px] bg-gradient-to-br from-brand-orange/40 via-brand-pink/25 to-brand-cyan/40 blur-2xl" />
+        <div className="rounded-[28px] bg-gradient-to-br from-brand-orange/70 via-brand-pink/50 to-brand-cyan/70 p-[2px]">
+          <div className="h-24 w-24 overflow-hidden rounded-[26px] bg-brand-bg-alt sm:h-28 sm:w-28">
+            {showImage ? (
+              <img
+                src={resolveAssetPath(siteConfig.logo)}
+                alt={`${siteConfig.name} Logo`}
+                className="h-full w-full object-cover"
+                onError={() => setLogoFailed(true)}
+              />
+            ) : (
+              <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-brand-orange/25 via-transparent to-brand-cyan/25 text-3xl font-extrabold text-brand-text">
+                {initial}
+              </div>
+            )}
           </div>
-        )}
+        </div>
       </div>
 
-      <h1 className="mt-5 text-2xl font-bold tracking-tight text-brand-text sm:text-3xl">
+      <h1
+        className="animate-fade-in-up mt-5 text-[1.75rem] font-extrabold tracking-tight text-brand-text sm:text-3xl"
+        style={{ animationDelay: "90ms" }}
+      >
         {siteConfig.name}
       </h1>
 
-      <LiveBadge />
+      <div className="animate-fade-in-up" style={{ animationDelay: "150ms" }}>
+        <LiveBadge />
+      </div>
 
       {siteConfig.description && (
-        <p className="mt-3 max-w-sm text-sm text-pretty text-brand-muted sm:text-base">
+        <p
+          className="animate-fade-in-up mt-3 max-w-sm text-pretty text-sm text-brand-muted sm:text-base"
+          style={{ animationDelay: "200ms" }}
+        >
           {siteConfig.description}
         </p>
       )}
 
-      <SocialIcons />
+      <div className="animate-fade-in-up" style={{ animationDelay: "260ms" }}>
+        <SocialIcons />
+      </div>
     </header>
   );
 }

@@ -1,16 +1,19 @@
+import type { CSSProperties } from "react";
 import { ArrowUpRight } from "lucide-react";
 import type { LinkItem } from "../config/siteConfig";
 import { PlatformIcon } from "../utils/icons";
+import { getPlatformAccent } from "../utils/platformAccent";
 
 interface LinkCardProps {
   link: LinkItem;
 }
 
-/** Ein großer, klickbarer Link-Button mit Icon, Titel, optionaler Beschreibung. */
+/** Ein großer, klickbarer Glass-Card-Link-Button mit dezentem Plattform-Akzent. */
 export function LinkCard({ link }: LinkCardProps) {
   const accessibleLabel = link.description
     ? `${link.title} – ${link.description}`
     : link.title;
+  const accent = getPlatformAccent(link.icon);
 
   return (
     <a
@@ -18,14 +21,20 @@ export function LinkCard({ link }: LinkCardProps) {
       target="_blank"
       rel="noopener noreferrer"
       aria-label={`${accessibleLabel} (öffnet in neuem Tab)`}
-      className="group flex items-center gap-4 rounded-2xl border border-brand-border bg-brand-surface/80 p-4 backdrop-blur transition-all duration-200 hover:-translate-y-0.5 hover:border-brand-orange/40 hover:bg-brand-surface-hover hover:shadow-[0_8px_30px_-12px_rgba(255,106,26,0.35)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange focus-visible:ring-offset-2 focus-visible:ring-offset-brand-bg active:scale-[0.98]"
+      style={{ "--accent": accent } as CSSProperties}
+      className="group relative flex items-center gap-4 overflow-hidden rounded-[22px] border border-white/10 bg-white/[0.04] p-4 shadow-[0_4px_24px_-18px_var(--accent)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-0.5 hover:scale-[1.01] hover:border-white/20 hover:bg-white/[0.07] hover:shadow-[0_16px_40px_-12px_var(--accent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-brand-bg active:scale-[0.99]"
     >
-      <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-brand-border bg-brand-bg text-brand-text transition-colors group-hover:border-brand-orange/40 group-hover:text-brand-orange">
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-4 top-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent"
+      />
+
+      <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-white/80 transition-colors duration-300 group-hover:text-[var(--accent)]">
         <PlatformIcon icon={link.icon} className="h-6 w-6" />
       </span>
 
       <span className="min-w-0 flex-1">
-        <span className="block truncate text-base font-semibold text-brand-text">
+        <span className="block truncate text-base font-bold text-brand-text">
           {link.title || "Link"}
         </span>
         {link.description && (
@@ -36,7 +45,7 @@ export function LinkCard({ link }: LinkCardProps) {
       </span>
 
       <ArrowUpRight
-        className="h-5 w-5 shrink-0 text-brand-muted transition-all duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-brand-orange"
+        className="h-5 w-5 shrink-0 text-brand-muted transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[var(--accent)]"
         aria-hidden="true"
       />
     </a>

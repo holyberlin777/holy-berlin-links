@@ -20,7 +20,7 @@ function App() {
               <li
                 key={`${link.title}-${link.url}`}
                 className="animate-fade-in-up"
-                style={{ animationDelay: `${Math.min(index * 70, 500)}ms` }}
+                style={{ animationDelay: `${320 + Math.min(index * 70, 420)}ms` }}
               >
                 <LinkCard link={link} />
               </li>
@@ -30,7 +30,7 @@ function App() {
           {siteConfig.links.length === 0 && (
             <p className="mt-10 text-center text-sm text-brand-muted">
               Noch keine Links eingetragen. Füge welche in{" "}
-              <code className="rounded bg-brand-surface px-1.5 py-0.5">
+              <code className="rounded border border-white/10 bg-white/5 px-1.5 py-0.5">
                 src/config/siteConfig.ts
               </code>{" "}
               hinzu.

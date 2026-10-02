@@ -48,7 +48,7 @@ export function ShareButton() {
         type="button"
         onClick={handleShare}
         aria-label="Seite teilen"
-        className="flex h-11 w-11 items-center justify-center rounded-full border border-brand-border bg-brand-surface/80 text-brand-text backdrop-blur transition-all hover:scale-105 hover:border-brand-orange/50 hover:text-brand-orange focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange focus-visible:ring-offset-2 focus-visible:ring-offset-brand-bg"
+        className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.06] text-brand-text backdrop-blur-xl transition-all duration-300 hover:scale-105 hover:border-white/20 hover:bg-white/10 hover:shadow-[0_8px_30px_-10px_var(--color-brand-cyan)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-brand-bg"
       >
         {copied ? (
           <Check className="h-5 w-5 text-brand-green" aria-hidden="true" />
@@ -60,7 +60,7 @@ export function ShareButton() {
       <span
         role="status"
         aria-live="polite"
-        className={`absolute right-0 top-full mt-2 whitespace-nowrap rounded-lg border border-brand-border bg-brand-surface px-3 py-1.5 text-xs font-medium text-brand-text shadow-lg transition-all duration-200 ${
+        className={`absolute right-0 top-full mt-2 whitespace-nowrap rounded-lg border border-white/10 bg-white/[0.08] px-3 py-1.5 text-xs font-medium text-brand-text backdrop-blur-xl shadow-lg transition-all duration-200 ${
           copied
             ? "translate-y-0 opacity-100"
             : "pointer-events-none -translate-y-1 opacity-0"

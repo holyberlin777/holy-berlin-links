@@ -1,32 +1,33 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
   <defs>
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0b0c10"/>
-      <stop offset="100%" stop-color="#16181d"/>
+      <stop offset="0%" stop-color="#0d0b16"/>
+      <stop offset="100%" stop-color="#07060b"/>
     </linearGradient>
-    <radialGradient id="glowOrange" cx="15%" cy="20%" r="60%">
-      <stop offset="0%" stop-color="#ff6a1a" stop-opacity="0.35"/>
-      <stop offset="100%" stop-color="#ff6a1a" stop-opacity="0"/>
+    <radialGradient id="glowOrange" cx="12%" cy="18%" r="60%">
+      <stop offset="0%" stop-color="#ff7a33" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#ff7a33" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="glowBlue" cx="92%" cy="88%" r="60%">
-      <stop offset="0%" stop-color="#3dc9ff" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#3dc9ff" stop-opacity="0"/>
+    <radialGradient id="glowCyan" cx="92%" cy="90%" r="65%">
+      <stop offset="0%" stop-color="#2dd9ff" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#2dd9ff" stop-opacity="0"/>
     </radialGradient>
     <linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ff6a1a"/>
-      <stop offset="100%" stop-color="#3dc9ff"/>
+      <stop offset="0%" stop-color="#ff7a33"/>
+      <stop offset="50%" stop-color="#ff5fa8"/>
+      <stop offset="100%" stop-color="#2dd9ff"/>
     </linearGradient>
   </defs>
 
   <rect width="1200" height="630" fill="url(#bgGrad)"/>
   <rect width="1200" height="630" fill="url(#glowOrange)"/>
-  <rect width="1200" height="630" fill="url(#glowBlue)"/>
+  <rect width="1200" height="630" fill="url(#glowCyan)"/>
 
-  <circle cx="190" cy="275" r="90" fill="#101114" stroke="url(#ring)" stroke-width="4"/>
-  <text x="190" y="303" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="64" fill="#f5f6f7">HB</text>
+  <circle cx="190" cy="275" r="90" fill="#0f0d16" stroke="url(#ring)" stroke-width="4"/>
+  <text x="190" y="303" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="64" fill="#f7f7fb">HB</text>
 
-  <text x="325" y="265" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="62" fill="#f5f6f7">HOLY BERLIN</text>
-  <text x="325" y="318" font-family="Arial, Helvetica, sans-serif" font-weight="500" font-size="28" fill="#9a9da5">Fußball, Gaming &amp; Community</text>
+  <text x="325" y="265" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="62" fill="#f7f7fb">HOLY BERLIN</text>
+  <text x="325" y="318" font-family="Arial, Helvetica, sans-serif" font-weight="500" font-size="28" fill="#a9a8ba">Fußball, Gaming &amp; Community</text>
 
-  <text x="325" y="380" font-family="Arial, Helvetica, sans-serif" font-weight="500" font-size="24" fill="#ff6a1a">Twitch · TikTok · YouTube · Instagram · Discord</text>
+  <text x="325" y="380" font-family="Arial, Helvetica, sans-serif" font-weight="600" font-size="24" fill="#ff7a33">Twitch · TikTok · YouTube · Instagram · Discord</text>
 </svg>
