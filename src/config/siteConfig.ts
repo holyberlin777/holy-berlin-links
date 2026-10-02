@@ -83,8 +83,8 @@ export const siteConfig: SiteConfig = {
     },
     {
       title: "YouTube",
-      description: "Videos & Shorts",
-      url: "https://youtube.com/@holyberlin",
+      description: "Videos, Shorts & Highlights",
+      url: "https://www.youtube.com/@HolyBerlin",
       icon: "youtube",
     },
     {
