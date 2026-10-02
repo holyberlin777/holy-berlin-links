@@ -66,19 +66,19 @@ export const siteConfig: SiteConfig = {
   logo: "/logo.svg",
   isLive: false,
   liveLabel: "🔴 LIVE AUF TWITCH",
-  liveUrl: "https://twitch.tv/holyberlin",
+  liveUrl: "https://www.twitch.tv/holyberlin",
 
   links: [
     {
       title: "Twitch",
-      description: "Live bei unseren Streams dabei sein",
-      url: "https://twitch.tv/holyberlin",
+      description: "Unsere Livestreams",
+      url: "https://www.twitch.tv/holyberlin",
       icon: "twitch",
     },
     {
       title: "TikTok",
-      description: "Clips & Highlights",
-      url: "https://tiktok.com/@holyberlin",
+      description: "Clips, Highlights & mehr",
+      url: "https://www.tiktok.com/@cousinchen77",
       icon: "tiktok",
     },
     {
@@ -95,8 +95,8 @@ export const siteConfig: SiteConfig = {
     },
     {
       title: "WhatsApp",
-      description: "HOLY BERLIN Community",
-      url: "https://chat.whatsapp.com/DEIN-EINLADUNGSLINK",
+      description: "News & Updates",
+      url: "https://whatsapp.com/channel/0029Vb8xDK6F6sn7CTyX832J",
       icon: "whatsapp",
     },
     {
