@@ -1,5 +1,5 @@
 /**
- * Eigenständiger HOLY BERLIN Energy-Hintergrund: dunkler Grundverlauf,
+ * Eigenständiger Cousinchen Energy-Hintergrund: dunkler Grundverlauf,
  * zwei langsam driftende Farb-Glows (Orange oben links, Cyan unten rechts),
  * ein dezenter violetter Akzent sowie feines Punktmuster + Grain-Textur.
  * Rein dekorativ, blockiert keine Klicks.

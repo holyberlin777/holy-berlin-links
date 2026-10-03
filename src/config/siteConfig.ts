@@ -1,5 +1,5 @@
 /**
- * Zentrale Konfiguration der HOLY BERLIN Link-in-Bio Seite.
+ * Zentrale Konfiguration der Cousinchen Link-in-Bio Seite.
  *
  * Hier änderst du Name, Beschreibung, Logo, Live-Status und alle Links.
  * Für eine Schritt-für-Schritt-Anleitung siehe README.md.
@@ -67,7 +67,7 @@ export interface SiteConfig {
 }
 
 export const siteConfig: SiteConfig = {
-  name: "HOLY BERLIN",
+  name: "Cousinchen",
   description: "Fußball, Gaming & Community ⚽🎮",
   logo: "/logo.jpg",
   isLive: false,
