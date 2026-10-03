@@ -38,9 +38,15 @@ export interface LinkItem {
   /** Kurzer Zusatztext unter dem Titel (optional) */
   description?: string;
   /** Vollständige URL, z. B. "https://twitch.tv/holyberlin" */
-  url: string;
+  url?: string;
   /** Icon-Schlüssel, siehe IconName weiter oben bzw. src/utils/icons.tsx */
   icon: IconName;
+  /**
+   * true = Karte wird als "Coming soon" angezeigt: kein echter Link,
+   * nicht klickbar, dezent abgesetzt. Nützlich, solange eine Plattform
+   * noch keine echte URL hat.
+   */
+  comingSoon?: boolean;
 }
 
 export interface SiteConfig {
@@ -89,9 +95,9 @@ export const siteConfig: SiteConfig = {
     },
     {
       title: "Instagram",
-      description: "Behind the Scenes & Updates",
-      url: "https://instagram.com/holyberlin",
+      description: "Coming soon...",
       icon: "instagram",
+      comingSoon: true,
     },
     {
       title: "WhatsApp",
@@ -102,7 +108,7 @@ export const siteConfig: SiteConfig = {
     {
       title: "Discord",
       description: "Unser Community Server",
-      url: "https://discord.gg/DEIN-EINLADUNGSLINK",
+      url: "https://discord.gg/j69U5YkSC",
       icon: "discord",
     },
   ],

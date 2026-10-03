@@ -6,14 +6,20 @@ import { PlatformIcon } from "../utils/icons";
  * Link-Daten wie die großen Buttons zu – keine doppelte Pflege nötig.
  */
 export function SocialIcons() {
-  if (siteConfig.links.length === 0) return null;
+  // "Coming soon"-Links haben noch keine echte URL und werden hier
+  // ausgeblendet – die große Card unten zeigt den Hinweis stattdessen an.
+  const activeLinks = siteConfig.links.filter(
+    (link) => !link.comingSoon && link.url,
+  );
+
+  if (activeLinks.length === 0) return null;
 
   return (
     <nav
       aria-label="Social-Media-Profile"
       className="mt-5 flex flex-wrap items-center justify-center gap-3"
     >
-      {siteConfig.links.map((link) => (
+      {activeLinks.map((link) => (
         <a
           key={`social-${link.title}-${link.url}`}
           href={link.url}
