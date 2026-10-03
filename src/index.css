@@ -45,46 +45,6 @@ body {
   animation: fade-in-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-/* Langsames Pulsieren für den LIVE-Punkt. */
-@keyframes pulse-glow {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.35;
-  }
-}
-.animate-pulse-glow {
-  animation: pulse-glow 2.2s ease-in-out infinite;
-}
-
-/* Extrem langsame, dezente Bewegung der Hintergrund-Glows. */
-@keyframes drift-a {
-  0%,
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
-  50% {
-    transform: translate(30px, 24px) scale(1.06);
-  }
-}
-@keyframes drift-b {
-  0%,
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
-  50% {
-    transform: translate(-26px, -28px) scale(1.08);
-  }
-}
-.animate-drift-a {
-  animation: drift-a 26s ease-in-out infinite;
-}
-.animate-drift-b {
-  animation: drift-b 32s ease-in-out infinite;
-}
-
 /* Sehr feines Punktmuster für etwas Tiefe im Hintergrund. */
 .bg-dot-grid {
   background-image: radial-gradient(
