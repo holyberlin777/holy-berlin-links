@@ -69,7 +69,7 @@ export interface SiteConfig {
 export const siteConfig: SiteConfig = {
   name: "HOLY BERLIN",
   description: "Fußball, Gaming & Community ⚽🎮",
-  logo: "/logo.svg",
+  logo: "/logo.jpg",
   isLive: false,
   liveLabel: "🔴 LIVE AUF TWITCH",
   liveUrl: "https://www.twitch.tv/holyberlin",
