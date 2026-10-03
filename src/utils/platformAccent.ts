@@ -7,9 +7,9 @@
 export function getPlatformAccent(icon: string | undefined): string {
   switch (icon?.toLowerCase().trim()) {
     case "twitch":
-      return "var(--color-brand-red)";
+      return "var(--color-brand-violet)";
     case "tiktok":
-      return "var(--color-brand-cyan)";
+      return "var(--color-brand-red)";
     case "youtube":
       return "var(--color-brand-red)";
     case "instagram":
@@ -39,15 +39,15 @@ export function getPlatformAccent(icon: string | undefined): string {
 /**
  * Liefert den weichen Hintergrund-Glow hinter einer Link-Card (als CSS
  * background-image-Wert). Die meisten Plattformen bekommen einen runden
- * Verlauf in ihrer Akzentfarbe, Twitch bewusst einen mehrfarbigen,
+ * Verlauf in ihrer Akzentfarbe, TikTok bewusst einen mehrfarbigen,
  * smoothen Schwarz-Rot-Cyan-Verlauf.
  */
 export function getPlatformGlow(icon: string | undefined): string {
   switch (icon?.toLowerCase().trim()) {
     case "twitch":
-      return "linear-gradient(135deg, #060606 0%, #ff3b3b 52%, #2dd9ff 100%)";
+      return "radial-gradient(circle, var(--color-brand-violet), transparent 70%)";
     case "tiktok":
-      return "radial-gradient(circle, var(--color-brand-cyan), transparent 70%)";
+      return "linear-gradient(135deg, #060606 0%, #ff3b3b 52%, #2dd9ff 100%)";
     case "youtube":
       return "radial-gradient(circle, var(--color-brand-red), transparent 70%)";
     case "instagram":
