@@ -1,0 +1,94 @@
+/* ==========================================================================
+   Design-Tokens
+   Farben abgeleitet aus dem Logo: Navy #081058, Gold #B8A068
+   ========================================================================== */
+
+@font-face {
+  font-family: 'Instrument Serif';
+  src: url('/fonts/instrument-serif-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Instrument Serif';
+  src: url('/fonts/instrument-serif-400-italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter Variable';
+  src: url('/fonts/inter-variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Metrisch angepasste Ersatzschrift – verhindert Layout-Sprünge beim Laden */
+@font-face {
+  font-family: 'Instrument Fallback';
+  src: local('Georgia');
+  size-adjust: 93%;
+  ascent-override: 98%;
+  descent-override: 28%;
+  line-gap-override: 0%;
+}
+
+:root {
+  /* Marke – Navy */
+  --navy-950: #050818;
+  --navy-900: #080d26;
+  --navy-850: #0b1131;
+  --navy-800: #0f1641;
+  --navy-700: #172053;
+  --navy-600: #232d6b;
+  --brand-navy: #081058;
+
+  /* Marke – Gold */
+  --gold-300: #e3d5ae;
+  --gold-400: #cdb982;
+  --gold-500: #b8a068;
+  --gold-600: #9a8450;
+  --gold-700: #7a6937; /* Text auf hellem Grund (Kontrast ≥ 4,5:1) */
+
+  /* Neutrale Flächen */
+  --ivory-50: #fcfbf8;
+  --ivory-100: #f6f3ec;
+  --ivory-200: #ede8dc;
+  --ivory-300: #ddd6c5;
+  --ink: #0a0f2e;
+  --slate: #505669;
+  --mist: #a9aec6;
+
+  /* Typografie */
+  --font-display: 'Instrument Serif', 'Instrument Fallback', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+  --font-body: 'Inter Variable', Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  /* Layout */
+  --gutter: clamp(1.25rem, 4.2vw, 4.5rem);
+  --container: 1440px;
+  --header-h: 84px;
+  --section-y: clamp(5.5rem, 11vw, 10.5rem);
+  --radius: 2px;
+
+  /* Bewegung */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.76, 0, 0.24, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Ebenen */
+  --z-header: 100;
+  --z-menu: 90;
+  --z-dialog: 200;
+  --z-preloader: 1000;
+  --z-cursor: 9999;
+}
+
+@media (max-width: 720px) {
+  :root {
+    --header-h: 68px;
+  }
+}
